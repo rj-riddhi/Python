@@ -24,7 +24,7 @@ print("Print end index is not given", name[1:]) # takes last index as end index 
 # Slicing with skip steps
 print("Outpust with skipped steps of 2 is:", name[0:5:2]) # op of [0:5] = Radhi => now skip 2 steps op of [0:5:2] = Rdi
 
-# String functions (String functions are case sensitive)
+# String functions (String functions are case sensitive) (also it will create new string and will not affect to original string as strings are immutable in python so.)
 # 1.) len => gives length of string
 print("Length of name is:", len(name))
 

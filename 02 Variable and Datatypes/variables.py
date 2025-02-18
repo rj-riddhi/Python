@@ -38,3 +38,8 @@ print(type(name))
 float_num = float(name)
 print(float_num)
 print(type(float_num))
+
+
+# Important interview question
+print(f"{1.0 == 1}") # It will return True as values are same, For float and int values only
+print(f"{"1.0" == 1}") # It will return False as datatypes are different
