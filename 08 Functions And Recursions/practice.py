@@ -14,3 +14,11 @@ def maxNum(a,b,c):
         return c 
 n = maxNum(a,b,c)
 print(f"Max number is {n}")
+
+
+# Write a program to sum first n natural numbers.
+def sum(n):
+    if n == 1:
+        return 1
+    return sum(n-1)+n
+print(f"First 4 number sum is {sum(4)}")
