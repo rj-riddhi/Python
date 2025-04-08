@@ -45,3 +45,9 @@ def defVal(name,ending="Hello"):
     print(name,ending)
 name=input("Enter your name")
 defVal(name)
+
+# Arbitary Arguments, *args 
+def my_function(*kids): 
+  print("The youngest child is " + kids[2]) 
+ 
+my_function("Emil", "Tobias", "Linus")  

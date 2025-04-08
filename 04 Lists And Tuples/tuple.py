@@ -16,13 +16,20 @@ print(f"Type is: {type(c)} and length is {len(c)}")
 # a[0] = 0 # Will give an error
 # print(a)
 
+# Tuple are not changeable so for changes it, we will convert it to list and then change it 
+x = ("apple", "banana", "cherry") 
+y = list(x) 
+y[1] = "kiwi" 
+x = tuple(y) 
+print(x) 
+
 # Tuple methods => Like a string tuples are immutable so in every method it will return new tuple as a result and original tuple will remain same
 print(a)
 print(f"Length method: {len(a)}")
 print(f"Count method: {a.count(1)}")
-print(f"Index method: {a.index("Hello")}") # Will raise an error if given element is not present in tuple
+# print(f"Index method: {a.index("Hello")}") # Will raise an error if given element is not present in tuple
 print(f"Slicing of tuple: {a[0:4]}")
-print(f"Concatinate two tuples: {a + ("new", "tuple")}")
+# print(f"Concatinate two tuples: {a + ("new", "tuple")}")
 e = (1,2,3) 
 print(f"Min method: {min(e)}")
 print(f"Max method: {max(e)}")

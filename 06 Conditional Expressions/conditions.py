@@ -16,3 +16,12 @@ print("End of program")
 #  == , >= , <= 
 # Logical Operators
 # and, or, not
+
+# short hand if statement
+a = 34 
+b = 33 
+if a > b: print("a is greate")
+
+# short hand of if..else
+a = 33
+print('a is greater') if a > b else print("a is equal")

@@ -22,6 +22,13 @@ for item in l:
 else:
     print("done!")  #this is printed when for loop exhusted.
 
+for x in range(2, 6): 
+  print(x) 
+ 
+#  increment sequance with 3 (default is 1)
+for x in range(2, 6, 3): 
+  print(x)
+
 # break
 # 'break' used to come out the loop it exists the loop right now
 print("break keyword")
@@ -49,3 +56,12 @@ i = 0
 while(i < 2):
     print(i)
     i += 1
+
+# else statement with while
+print(" \nelse statement with while")
+i = 1 
+while i < 6: 
+  print(i) 
+  i += 1 
+else: 
+  print("i is no longer less than 6") 
