@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Login Page</title> 
+</head> 
+<body> 
+    <form id="login-form"> 
+        <input type="text" id="username" placeholder="Enter username"> 
+        <input type="password" id="password" placeholder="Enter password"> 
+        <button id="login-btn">Login</button> 
+    </form> 
+    <p id="message"></p> 
+    <script> 
+        document.getElementById("login-btn").addEventListener("click", function(event) { 
+            event.preventDefault(); 
+            var username = document.getElementById("username").value; 
+            var password = document.getElementById("password").value; 
+            if (username === "admin" && password === "1234") { 
+                document.getElementById("message").innerText = "Login Successful!"; 
+            } else { 
+                document.getElementById("message").innerText = "Invalid Credentials"; 
+            } 
+        }); 
+    </script> 
+</body> 
+</html
