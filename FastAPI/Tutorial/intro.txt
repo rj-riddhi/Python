@@ -1,0 +1,4 @@
+Fast api:
+-> It is a python web framework
+-> Provides automatic documentations - provides swagger ui for created apis to test and check the responses
+-> Also provide redock UI
