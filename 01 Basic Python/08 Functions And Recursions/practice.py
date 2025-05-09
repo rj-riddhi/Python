@@ -22,3 +22,10 @@ def sum(n):
         return 1
     return sum(n-1)+n
 print(f"First 4 number sum is {sum(4)}")
+
+def func():
+    try:
+        print("Edu", end="")
+    finally:
+        print("reka!")
+func()

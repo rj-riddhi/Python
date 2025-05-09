@@ -28,3 +28,10 @@ print(cars)
 # reverse(): Reverses the order of the list 
 # sort(): Sorts the list 
 
+import array as arr
+a = arr.array('i',[1,2,3,4])
+print(a)
+
+# loop in array
+for i in a:
+    print(i)
