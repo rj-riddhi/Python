@@ -1,0 +1,80 @@
+To pull the image
+run: docker pull image_name
+====================================================================================================================================
+to run the container
+run: docker run image_name
+====================================================================================================================================
+to stop the container
+run: docker stop image_name
+====================================================================================================================================
+to list the images
+run: docker images
+====================================================================================================================================
+to remove image
+run: docker rmi image_name
+====================================================================================================================================
+to list the running containers
+run: docker ps
+====================================================================================================================================
+to list the all running and exited containers
+run: docker ps -a
+====================================================================================================================================
+docker run image_name will run the container in attach mode to terminate console use ctrl+x
+
+to run container in dettach mode so that container could run in background and we can start over process in forgound
+run: docker run -d image_name
+====================================================================================================================================
+to attach dettached container
+run: docker attach container_id
+====================================================================================================================================
+to remove container
+run: docker rm name
+====================================================================================================================================
+run container with specific tag
+run: docker run image:tag
+====================================================================================================================================
+to spupport intractive terminal with container which require user input
+run: docker -it name
+(i = intractive, t = terminal)
+====================================================================================================================================
+port mapping
+run: docker run port1:port2 name
+default container is running on port2 ip but that is only accesible withing the docker host not outside the host
+here ip of port 1 will redirect request to the ip of port2 on wich our webapplication is running within the docker host
+port2 = internal ip
+port1 = external IP
+====================================================================================================================================
+To store the volume of data so that we can access after delete the container
+run: docker run -v volume_name:dir image_name 
+dir = another new dir where the data will store from the dir1 and can be accesible after the container removal (Volume mounting)
+
+
+or if we already have data in another space withinh the docker host (Bind mounting)
+run: docker run -v loc1:loc2 image_name
+====================================================================================================================================
+
+to return all the info of perticular container for inspection
+run: docker inspect name
+this will give info in json format
+
+====================================================================================================================================
+Create your own docker image.
+Dockerfile:
+format of file: Instruction Argument
+steps:
+1) OS type (The container based on which OS?)
+2) Update apt repo
+3) Install dependenacy using apt
+4) Install python dependenacy
+5) Copy source code to the opt folder
+6) Run the webserver
+
+Here each layer is depends on previous layers it takes the changes from the prev layer.
+cache management is there so it will be fasts in each and every changes.
+
+
+then build image
+run: docker build Dockerfile -t [accountname/image-name]
+
+push it publically
+run: docker push [accountname/image-name]
